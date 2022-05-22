@@ -10,6 +10,7 @@ CREATE TABLE tab_accounts
     login    TEXT NOT NULL,
     password TEXT NOT NULL,
     role_id  INT  NOT NULL,
+    is_active BOOL NOT NULL DEFAULT true,
     FOREIGN KEY (role_id) REFERENCES tab_roles (id)
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
@@ -55,12 +56,17 @@ VALUES (2, 'anna@karenin.ru'),
        (3, 'admin@admin.ru'),
        (3, 'ad@admin.ru');
 
-SELECT tab_accounts.id AS 'id', 
-       login, password, role, 
-       last_name, first_name, email
+
+SELECT tab_accounts.id AS 'id',
+       login,
+       password,
+       role,
+       last_name,
+       first_name,
+       email
 FROM tab_users
-JOIN tab_accounts 
-    ON tab_users.id = tab_accounts.id
-JOIN tab_roles 
-    ON tab_accounts.role_id = tab_roles.id
-JOIN tab_user_emails ON tab_user_emails.user_id = tab_users.id;
+         JOIN tab_accounts
+              ON tab_users.id = tab_accounts.id
+         JOIN tab_roles
+              ON tab_accounts.role_id = tab_roles.id
+         JOIN tab_user_emails ON tab_user_emails.user_id = tab_users.id;
