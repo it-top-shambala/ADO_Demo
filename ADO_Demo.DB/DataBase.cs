@@ -4,7 +4,7 @@ namespace ADO_Demo.DB
 {
     public abstract class DataBase
     {
-        private const string Str = "Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;";
+        private const string Str = "";
         protected readonly MySqlConnection _db;
         protected MySqlCommand _command;
 
