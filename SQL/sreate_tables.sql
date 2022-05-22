@@ -54,3 +54,13 @@ INSERT INTO tab_user_emails(user_id, email)
 VALUES (2, 'anna@karenin.ru'),
        (3, 'admin@admin.ru'),
        (3, 'ad@admin.ru');
+
+SELECT tab_accounts.id AS 'id', 
+       login, password, role, 
+       last_name, first_name, email
+FROM tab_users
+JOIN tab_accounts 
+    ON tab_users.id = tab_accounts.id
+JOIN tab_roles 
+    ON tab_accounts.role_id = tab_roles.id
+JOIN tab_user_emails ON tab_user_emails.user_id = tab_users.id;
