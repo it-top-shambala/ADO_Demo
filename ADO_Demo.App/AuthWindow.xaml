@@ -1,0 +1,21 @@
+﻿<Window x:Class="ADO_Demo.App.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO_Demo.App"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="240" Width="250">
+    <StackPanel Background="MintCream">
+        <TextBlock Text="Логин:" FontSize="12" FontWeight="Bold" Margin="0 0 0 5" Padding="7" />
+        <Border BorderThickness="1" BorderBrush="Blue" Width="230" > 
+            <TextBox x:Name="textBoxLogin" FontSize="12" Padding="5"/>
+        </Border>
+        <TextBlock Text="Пароль:" FontSize="12" FontWeight="Bold" Margin="0 0 0 5" Padding="7"/>  
+         <Border BorderThickness="1" BorderBrush="Blue" Width="230"> 
+            <PasswordBox x:Name="passBox" FontSize="12" Padding="5"/>
+        </Border>             
+        <Button Content="Войти" Width="200" Height="40" FontSize="15" FontWeight="Bold" Margin="0 25" Click="ButtonAuthClick"/>
+
+    </StackPanel>
+</Window>
