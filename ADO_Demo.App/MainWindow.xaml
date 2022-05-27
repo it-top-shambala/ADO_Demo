@@ -9,11 +9,14 @@
         DataContext="{Binding RelativeSource={RelativeSource Self}}">
     
     <StackPanel>
-        <ListView ItemsSource="{Binding Roles}">
+        <ListView ItemsSource="{Binding Users}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Id}">ID</GridViewColumn>
-                    <GridViewColumn DisplayMemberBinding="{Binding RoleName}">role</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding FirstName}">Имя</GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding LastName}">Фамилия</GridViewColumn> 
+                    <GridViewColumn DisplayMemberBinding="{Binding Role}">Роль</GridViewColumn>   
+                    <GridViewColumn DisplayMemberBinding="{Binding Email}">Email</GridViewColumn>                      
                 </GridView>
             </ListView.View>
         </ListView>

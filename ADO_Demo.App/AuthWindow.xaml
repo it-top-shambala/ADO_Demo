@@ -1,0 +1,26 @@
+﻿<Window x:Class="ADO_Demo.App.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADO_Demo.App"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="240" Width="250">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles\StylesAuthWindow.xaml"/>
+    </Window.Resources>
+    
+    
+    <StackPanel Background="MintCream">
+        <TextBlock Text="Логин:" Style="{DynamicResource StyleTextBlock}" />
+        <Border Style="{DynamicResource StyleBorder}" > 
+            <TextBox x:Name="textBoxLogin" Style="{DynamicResource StyleTextBox}"/>
+        </Border>
+        <TextBlock Text="Пароль:" Style="{DynamicResource StyleTextBlock}" />  
+         <Border Style="{DynamicResource StyleBorder}"> 
+            <PasswordBox x:Name="passBox" Style="{DynamicResource StylePasswordBox}" />
+        </Border>             
+        <Button Content="Войти" Style="{DynamicResource StyleButton}" Click="ButtonAuthClick"/>
+
+    </StackPanel>
+</Window>

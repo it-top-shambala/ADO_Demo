@@ -10,4 +10,10 @@
       <ProjectReference Include="..\ADO_Demo.DB\ADO_Demo.DB.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="config_db.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
