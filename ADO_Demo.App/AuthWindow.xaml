@@ -6,16 +6,21 @@
         xmlns:local="clr-namespace:ADO_Demo.App"
         mc:Ignorable="d"
         Title="Авторизация" Height="240" Width="250">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles\StylesAuthWindow.xaml"/>
+    </Window.Resources>
+    
+    
     <StackPanel Background="MintCream">
-        <TextBlock Text="Логин:" FontSize="12" FontWeight="Bold" Margin="0 0 0 5" Padding="7" />
-        <Border BorderThickness="1" BorderBrush="Blue" Width="230" > 
-            <TextBox x:Name="textBoxLogin" FontSize="12" Padding="5"/>
+        <TextBlock Text="Логин:" Style="{DynamicResource StyleTextBlock}" />
+        <Border Style="{DynamicResource StyleBorder}" > 
+            <TextBox x:Name="textBoxLogin" Style="{DynamicResource StyleTextBox}"/>
         </Border>
-        <TextBlock Text="Пароль:" FontSize="12" FontWeight="Bold" Margin="0 0 0 5" Padding="7"/>  
-         <Border BorderThickness="1" BorderBrush="Blue" Width="230"> 
-            <PasswordBox x:Name="passBox" FontSize="12" Padding="5"/>
+        <TextBlock Text="Пароль:" Style="{DynamicResource StyleTextBlock}" />  
+         <Border Style="{DynamicResource StyleBorder}"> 
+            <PasswordBox x:Name="passBox" Style="{DynamicResource StylePasswordBox}" />
         </Border>             
-        <Button Content="Войти" Width="200" Height="40" FontSize="15" FontWeight="Bold" Margin="0 25" Click="ButtonAuthClick"/>
+        <Button Content="Войти" Style="{DynamicResource StyleButton}" Click="ButtonAuthClick"/>
 
     </StackPanel>
 </Window>

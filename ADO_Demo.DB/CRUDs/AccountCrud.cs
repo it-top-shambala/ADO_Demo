@@ -4,7 +4,7 @@ using ADO_Demo.DB.Models;
 
 namespace ADO_Demo.DB.CRUDs
 {
-    internal class AccountCrud:DataBase
+    public class AccountCrud:DataBase
     {
 
             public AccountCrud() : base() { }
